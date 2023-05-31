@@ -1,0 +1,19 @@
+{
+  "name": "next_forecast_test",
+  // Dockerfileでイメージ・コンテナを作成
+  "dockerComposeFile": "../docker-compose.yml",
+  // 使用するサービス
+  "service": "next_forecast_test",
+  // VS Codeのワークスペースフォルダ
+  "workspaceFolder": "/workspace",
+  // リモート先のVS Codeにインストールする拡張機能
+  "extensions": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-azuretools.vscode-docker",
+    "bradlc.vscode-tailwindcss",
+    "stylelint.vscode-stylelint",
+    "jock.svg"
+  ],
+  "shutdownAction": "stopCompose"
+}

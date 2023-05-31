@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  next_forecast_test:
+    container_name: next_forecast_test
+    image: next_forecast_test:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    env_file:
+      - .env.local
+    volumes:
+      - ./:/workspace:delegated
+      - /workspace/node_modules
+      #- nestjs-node-modules:/workspace/node_modules
+    ports:
+      - "3000:3000" # client
+      - "6006:6006" # storybook
+      - "9229:9229" # server
+
+# volumes:
+#   nestjs-node-modules:
